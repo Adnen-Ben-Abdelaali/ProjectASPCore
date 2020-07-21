@@ -9,7 +9,8 @@ namespace ProjectASPCore.Models
     {
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
-        public string description { get; set; }
-        public List<Book>
+        public string Description { get; set; }
+        public List<Book> Books { get; set; }
+       
     }
 }

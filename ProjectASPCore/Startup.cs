@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ProjectASPCore.Repository;
 
 namespace ProjectASPCore
 {
@@ -17,6 +18,8 @@ namespace ProjectASPCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<IBookRepository, MookBookRepository>();
+            services.AddScoped<ICategoryRepository, MookCategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
